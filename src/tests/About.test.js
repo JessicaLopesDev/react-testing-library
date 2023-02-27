@@ -14,10 +14,12 @@ describe('Testes About.js', () => {
     expect(title).toBeInTheDocument();
   });
 
-  // it('Verifica se a página contém dois parágrafos com texto sobre a Pokédex', () => {
-  //   const paragraphs = screen.getAllByLabelText(<p />);
-  //   expect(paragraphs).toHaveLength(2);
-  // });
+  it('Verifica se a página contém dois parágrafos com texto sobre a Pokédex', () => {
+    const paragraph1 = screen.getByText('This application simulates a Pokédex, a digital encyclopedia containing all Pokémon');
+    const paragraph2 = screen.getByText('One can filter Pokémon by type, and see more details for each one of them');
+    expect(paragraph1).toBeInTheDocument();
+    expect(paragraph2).toBeInTheDocument();
+  });
 
   it('Verifica se a página contém a imagem de uma Pokédex:', () => {
     const image = screen.getByAltText('Pokédex');
