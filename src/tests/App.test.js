@@ -7,7 +7,7 @@ import { act } from 'react-dom/test-utils';
 import App from '../App';
 import renderWithRouter from '../renderWithRouter';
 
-describe('Teste App.js', () => {
+describe('Testes App.js', () => {
   it('Verifica se o topo da aplicação contém os links de navegação: Home, About e Favorite Pokémon', () => {
     renderWithRouter(<App />);
     const homeLink = screen.getByRole('link', { name: 'Home' });
