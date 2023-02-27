@@ -2,10 +2,10 @@ import React from 'react';
 
 import userEvent from '@testing-library/user-event';
 import { screen } from '@testing-library/react';
+import { act } from 'react-dom/test-utils';
 
 import App from '../App';
 import renderWithRouter from '../renderWithRouter';
-import { act } from 'react-dom/test-utils';
 
 describe('Teste App.js', () => {
   it('Verifica se o topo da aplicação contém os links de navegação: Home, About e Favorite Pokémon', () => {
