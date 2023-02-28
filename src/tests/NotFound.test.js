@@ -11,8 +11,8 @@ describe('Testes NotFound.js', () => {
   });
 
   it('Verifica se a página contém um heading h2 com o texto Page requested not found', () => {
-    const title = screen.getByRole('heading', { level: 2, name: 'Page requested not found' });
-    expect(title).toBeInTheDocument();
+    const title = screen.getByRole('heading', { level: 2 });
+    expect(title).toHaveTextContent('Page requested not found');
   });
 
   it('Verifica se a página mostra a imagem correta', () => {
